@@ -50,7 +50,6 @@ public class PasswordHasher extends javax.swing.JInternalFrame {
         dialogoMensajes.setTitle("Error");
         dialogoMensajes.setAlwaysOnTop(true);
         dialogoMensajes.setMinimumSize(new java.awt.Dimension(200, 100));
-        dialogoMensajes.setPreferredSize(new java.awt.Dimension(200, 100));
         dialogoMensajes.setResizable(false);
         dialogoMensajes.setType(java.awt.Window.Type.POPUP);
 
@@ -91,8 +90,9 @@ public class PasswordHasher extends javax.swing.JInternalFrame {
 
         setMinimumSize(new java.awt.Dimension(390, 290));
         setPreferredSize(new java.awt.Dimension(390, 290));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(passwordTextfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 40, 210, -1));
+        getContentPane().setLayout(null);
+        getContentPane().add(passwordTextfield);
+        passwordTextfield.setBounds(157, 40, 210, 22);
 
         hashedPasswordTextfield.setEditable(false);
         hashedPasswordTextfield.setColumns(20);
@@ -100,7 +100,8 @@ public class PasswordHasher extends javax.swing.JInternalFrame {
         hashedPasswordTextfield.setRows(3);
         jScrollPane1.setViewportView(hashedPasswordTextfield);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 70, 210, 71));
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(157, 70, 210, 71);
 
         saltTextfield.setEditable(false);
         saltTextfield.setColumns(20);
@@ -108,19 +109,24 @@ public class PasswordHasher extends javax.swing.JInternalFrame {
         saltTextfield.setRows(3);
         jScrollPane2.setViewportView(saltTextfield);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 150, 210, 68));
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(157, 150, 210, 68);
 
         jLabel1.setText("Password Hasher (SHA-256)");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 360, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 11, 360, 16);
 
         passwordLabel.setText("Password");
-        getContentPane().add(passwordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 44, 130, -1));
+        getContentPane().add(passwordLabel);
+        passwordLabel.setBounds(10, 44, 130, 16);
 
         hashedPasswordLabel.setText("Hashed Password");
-        getContentPane().add(hashedPasswordLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 64, 140, -1));
+        getContentPane().add(hashedPasswordLabel);
+        hashedPasswordLabel.setBounds(10, 64, 140, 16);
 
         saltLabel.setText("Salt (Password Key)");
-        getContentPane().add(saltLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 130, -1));
+        getContentPane().add(saltLabel);
+        saltLabel.setBounds(10, 150, 130, 16);
 
         generarButton.setText("Generar");
         generarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +134,8 @@ public class PasswordHasher extends javax.swing.JInternalFrame {
                 generarButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(generarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 124, -1));
+        getContentPane().add(generarButton);
+        generarButton.setBounds(240, 220, 124, 25);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
